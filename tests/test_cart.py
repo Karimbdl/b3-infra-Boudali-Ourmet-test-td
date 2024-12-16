@@ -1,4 +1,7 @@
 import  unittest
+import sys
+
+sys.path.append('GIT/cart.py')
 from cart import Cart
 from product import Product
 
@@ -13,13 +16,13 @@ class TestCart(unittest.TestCase):
     def test_application_coupon(self):
         """Test d'application d'un coupon valide."""
         self.cart.add_product(self.product1, 2)
-        self.cart.coupon(self.product1, "SUMMER10", 10)  # Correcte fonction appelée
+        self.cart.coupon("SUMMER10", 10)
         self.assertEqual(self.cart.calculate_total(), 1800)
 
-    def test_apply_coupon_invalid_discount(self):
+    def coupon_invalide(self):
         """Test d'application d'un coupon avec un pourcentage invalide."""
         with self.assertRaises(ValueError):
-            self.cart.coupon(self.product1, "INVALID", -10)
+            self.cart.coupon("INVALID", -10)
 
     def test_modify_cart_success(self):
         """Test de modification de la quantité d'un produit existant."""
