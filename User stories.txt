@@ -1,0 +1,24 @@
+﻿User Stories pour la classe Cart
+En tant qu'utilisateur, je veux ajouter un produit dans mon panier avec une quantité spécifique afin de préparer mon achat.
+Critères d'acceptation :
+Si la quantité demandée est disponible en stock, le produit est ajouté au panier.
+Si la quantité demandée dépasse le stock disponible, une erreur est levée indiquant le stock insuffisant.
+ Si le produit existe déjà dans le panier, la quantité est mise à jour en l'ajoutant à l'existante.
+-------------------------------------------------------------------------------------------------------------------------
+En tant qu'utilisateur, je veux supprimer un produit de mon panier afin de ne plus l'acheter.
+Critères d'acceptation :
+Si le produit est dans le panier, il est retiré avec succès.
+Si le produit n'est pas dans le panier, une erreur est levée indiquant que le produit n'existe pas dans le panier.
+-------------------------------------------------------------------------------------------------------------------------
+En tant qu'utilisateur, je veux calculer le montant total de mon panier afin de connaître le coût total des produits sélectionnés.
+Critères d'acceptation :
+Le montant total est calculé en additionnant le prix de chaque produit multiplié par sa quantité dans le panier.
+Le montant total est retourné sous forme numérique.
+-------------------------------------------------------------------------------------------------------------------------
+En tant qu'utilisateur, je veux afficher le contenu de mon panier afin de vérifier les produits ajoutés et leurs détails.
+Critères d'acceptation :
+ Si le panier est vide, un message indiquant que le panier est vide est affiché. Si le panier contient des produits, chaque ligne affiche : Le nom du produit. La quantité ajoutée. Le sous-total correspondant (prix du produit * quantité).
+-------------------------------------------------------------------------------------------------------------------------
+En tant qu'utilisateur, je veux être averti si j'essaie d'ajouter une quantité non disponible en stock afin d'éviter les erreurs.
+Critères d'acceptation :
+Une erreur explicite est levée indiquant le stock actuel disponible pour le produit concerné.
